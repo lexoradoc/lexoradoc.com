@@ -2,6 +2,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
 import { Route, Router as WouterRouter, Switch } from "wouter";
+import { useEffect, useState } from "react";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import ScrollToTop from "./components/ScrollToTop";
@@ -19,6 +20,21 @@ import Layout from "./components/Layout";
 import FloatingWhatsAppButton from "./components/FloatingWhatsAppButton";
 import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
+
+function useHashLocation(): [string, (to: string) => void] {
+  const readLocation = () => window.location.hash.slice(1) || "/";
+  const [location, setLocation] = useState(readLocation);
+
+  useEffect(() => {
+    const handleHashChange = () => setLocation(readLocation());
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
+
+  return [location, (to) => {
+    window.location.hash = to.startsWith("/") ? to : `/${to}`;
+  }];
+}
 
 function AppRoutes() {
   return (
@@ -47,7 +63,7 @@ function App() {
         <TooltipProvider>
           <ScrollToTop />
           <Toaster />
-          <WouterRouter base={import.meta.env.BASE_URL}>
+          <WouterRouter hook={useHashLocation}>
             <Layout>
               <AppRoutes />
             </Layout>
