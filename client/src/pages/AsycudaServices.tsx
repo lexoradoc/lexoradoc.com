@@ -25,9 +25,10 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { mediaUrl } from "@/lib/media";
 
 const WHATSAPP_URL = "https://wa.me/9647844342200";
-const HERO_BG = "/media/hero.webp";
+const HERO_BG = mediaUrl("hero.webp");
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -202,7 +203,7 @@ export default function AsycudaServices() {
       {/* VISUAL BREAK - DOCUMENTS */}
       <section className="relative h-64 md:h-80 overflow-hidden">
         <img
-          src="/media/port.webp"
+          src={mediaUrl("port.webp")}
           alt="مراجعة وثائق تجارية وتدقيق HS Code - Lexora Doc"
           className="w-full h-full object-cover"
           loading="lazy"

@@ -19,8 +19,9 @@ import {
   Landmark,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import { mediaUrl } from "@/lib/media";
 
-const ABOUT_BG = "/media/hero.webp";
+const ABOUT_BG = mediaUrl("hero.webp");
 const WHATSAPP_URL = "https://wa.me/9647844342200";
 
 const fadeUp = {
@@ -137,7 +138,7 @@ export default function About() {
             className="flex justify-center mb-14"
           >
             <img
-              src="/media/logo.jpg"
+              src={mediaUrl("logo.jpg")}
               alt="Lexora Doc"
               className="h-24 md:h-28 w-auto object-contain"
               style={{

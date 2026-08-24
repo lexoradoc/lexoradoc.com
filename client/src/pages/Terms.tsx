@@ -6,6 +6,7 @@
 import { useEffect } from "react";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
+import { mediaUrl } from "@/lib/media";
 import {
   Shield,
   Landmark,
@@ -28,7 +29,7 @@ const fadeUp = {
 };
 
 const LOGO_URL =
-  "/media/logo.jpg";
+  mediaUrl("logo.jpg");
 
 const sections = [
   {

@@ -7,6 +7,7 @@
 import { Link } from "wouter";
 import { MessageCircle, Mail, Phone, Landmark, Shield, CheckCircle, Linkedin, Instagram, ShieldCheck, Send } from "lucide-react";
 import { useState } from "react";
+import { mediaUrl } from "@/lib/media";
 
 const WHATSAPP_URL = "https://wa.me/9647844342200";
 
@@ -91,7 +92,7 @@ export default function Footer() {
       <div className="py-10 flex flex-col items-center justify-center border-b border-white/5">
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl px-8 py-5 border border-white/10">
           <img
-            src="/media/logo.jpg"
+            src={mediaUrl("logo.jpg")}
             alt="Lexora Doc"
             className="h-16 md:h-20 w-auto object-contain"
             style={{ imageRendering: 'auto' }}

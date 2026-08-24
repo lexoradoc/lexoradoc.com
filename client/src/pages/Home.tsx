@@ -35,9 +35,10 @@ import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import Testimonials from "@/components/Testimonials";
 import ServiceRequestModal from "@/components/ServiceRequestModal";
+import { mediaUrl } from "@/lib/media";
 
 const WHATSAPP_URL = "https://wa.me/9647844342200";
-const HERO_BG = "/media/hero.webp";
+const HERO_BG = mediaUrl("hero.webp");
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -174,7 +175,7 @@ export default function Home() {
         {/* Logo Watermark */}
         <div className="absolute inset-0 z-[1] flex items-center justify-center pointer-events-none overflow-hidden">
           <img
-            src="/media/logo.jpg"
+            src={mediaUrl("logo.jpg")}
             alt="لوجو Lexora Doc - خدمات التخليص الجمركي"
             className="w-[500px] h-auto opacity-[0.05] select-none"
             style={{ filter: 'brightness(2) grayscale(0.3)' }}
@@ -429,7 +430,7 @@ export default function Home() {
       {/* ===== VISUAL SECTION - SHIPPING ===== */}
       <section className="relative h-72 md:h-96 overflow-hidden">
         <img
-          src="/media/port.webp"
+          src={mediaUrl("port.webp")}
           alt="ميناء تجاري دولي - إدارة ملفات الاستيراد والشحن"
           className="w-full h-full object-cover"
           loading="lazy"
@@ -570,7 +571,7 @@ export default function Home() {
               className="relative rounded-2xl overflow-hidden shadow-2xl"
             >
               <img
-                src="/media/hero.webp"
+                src={mediaUrl("hero.webp")}
                 alt="متخصص يحمل وثيقة امتثال تجاري معتمدة - Lexora Doc"
                 className="w-full h-80 object-cover"
                 loading="lazy"

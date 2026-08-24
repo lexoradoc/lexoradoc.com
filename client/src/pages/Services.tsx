@@ -17,9 +17,10 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
+import { mediaUrl } from "@/lib/media";
 
 const WHATSAPP_URL = "https://wa.me/9647844342200";
-const SERVICES_BG = "/media/port.webp";
+const SERVICES_BG = mediaUrl("port.webp");
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -34,7 +35,7 @@ const services = [
   {
     icon: ShieldCheck,
     title: "خدمات ASYCUDA الجمركية",
-    image: "/media/service-asycuda.webp",
+    image: mediaUrl("service-asycuda.webp"),
     description:
       "إعداد البيان الجمركي المسبق والنهائي، مراجعة ملفات الاستيراد، والتأكد من الامتثال الكامل لمتطلبات نظام ASYCUDA World ومتطلبات البنك المركزي العراقي.",
     features: [
@@ -47,7 +48,7 @@ const services = [
   {
     icon: FileText,
     title: "مراجعة الوثائق وتدقيق HS Code",
-    image: "/media/service-documents.webp",
+    image: mediaUrl("service-documents.webp"),
     description:
       "مراجعة دقيقة لجميع الوثائق المرفقة بملف الاستيراد وتدقيق تصنيف HS Code للبضائع. نتأكد من توافق جميع المستندات مع المتطلبات الجمركية والبنكية.",
     features: [
@@ -60,7 +61,7 @@ const services = [
   {
     icon: Landmark,
     title: "الامتثال لتعليمات البنك المركزي",
-    image: "/media/service-bank.webp",
+    image: mediaUrl("service-bank.webp"),
     description:
       "تنظيم ملفات التحويل المصرفي والاستيراد وفق التعليمات الصادرة عن البنك المركزي العراقي. نضمن أن جميع مستنداتك مستوفية للمتطلبات التنظيمية الحديثة.",
     features: [
@@ -73,7 +74,7 @@ const services = [
   {
     icon: Building2,
     title: "خدمات الشركات والمستوردين",
-    image: "/media/service-corporate.webp",
+    image: mediaUrl("service-corporate.webp"),
     description:
       "حلول متكاملة للشركات الكبرى والمستوردين في إدارة ملفات الاستيراد. نوفر دعماً مستمراً وإدارة احترافية لضمان سير العمليات التجارية بكفاءة عالية.",
     features: [

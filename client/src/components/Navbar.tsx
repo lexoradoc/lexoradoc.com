@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, MessageCircle, FileText } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import ServiceRequestModal from "@/components/ServiceRequestModal";
+import { mediaUrl } from "@/lib/media";
 
 const WHATSAPP_URL = "https://wa.me/9647844342200";
 
@@ -56,7 +57,7 @@ export default function Navbar() {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 no-underline">
               <img
-                src="/media/logo.jpg"
+                src={mediaUrl("logo.jpg")}
                 alt="Lexora Doc"
                 className="h-[3.125rem] w-auto object-contain"
                 style={{ imageRendering: 'auto' }}
