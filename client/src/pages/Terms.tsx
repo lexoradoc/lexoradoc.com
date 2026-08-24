@@ -27,7 +27,8 @@ const fadeUp = {
   }),
 };
 
-const LOGO_URL = "/media/logo.jpg";
+const LOGO_URL =
+  "/media/logo.jpg";
 
 const sections = [
   {

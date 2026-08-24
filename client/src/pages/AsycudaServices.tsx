@@ -27,7 +27,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 const WHATSAPP_URL = "https://wa.me/9647844342200";
-const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663385768314/aneV9kYBsf2QHxWJrr67QY/lexora-asycuda-4YciusSe5PcehRrw5RyNET.webp";
+const HERO_BG = "/media/hero.webp";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -202,7 +202,7 @@ export default function AsycudaServices() {
       {/* VISUAL BREAK - DOCUMENTS */}
       <section className="relative h-64 md:h-80 overflow-hidden">
         <img
-          src="https://d2xsxph8kpxj0f.cloudfront.net/310519663385768314/aneV9kYBsf2QHxWJrr67QY/lexora-documents-TNruSwkMsmgXu7G8b4xFsT.webp"
+          src="/media/port.webp"
           alt="مراجعة وثائق تجارية وتدقيق HS Code - Lexora Doc"
           className="w-full h-full object-cover"
           loading="lazy"

@@ -19,7 +19,7 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 
 const WHATSAPP_URL = "https://wa.me/9647844342200";
-const SERVICES_BG = "/media/og-image.png";
+const SERVICES_BG = "/media/port.webp";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -34,35 +34,35 @@ const services = [
   {
     icon: ShieldCheck,
     title: "خدمات ASYCUDA الجمركية",
-    image: "/media/og-image.png",
+    image: "/media/service-asycuda.webp",
     description:
-      "تنظيم البيانات والمستندات اللازمة للبيان المسبق أو النهائي، وفق حالة الملف ونطاق الخدمة المطلوب.",
+      "إعداد البيان الجمركي المسبق والنهائي، مراجعة ملفات الاستيراد، والتأكد من الامتثال الكامل لمتطلبات نظام ASYCUDA World ومتطلبات البنك المركزي العراقي.",
     features: [
       "إعداد البيان الجمركي المسبق والنهائي",
-      "مراجعة أولية لملف الاستيراد",
-      "تحديد المستندات المتاحة والناقصة",
-      "توضيح الخطوة التالية للملف",
+      "مراجعة شاملة لملفات الاستيراد",
+      "الامتثال لمتطلبات البنك المركزي",
+      "تسريع إجراءات التخليص الجمركي",
     ],
   },
   {
     icon: FileText,
     title: "مراجعة الوثائق وتدقيق HS Code",
-    image: "/media/og-image.png",
+    image: "/media/service-documents.webp",
     description:
-      "فحص الفاتورة وبوليصة الشحن وشهادة المنشأ والمعلومات ذات الصلة، مع مراجعة أولية لتصنيف البضاعة.",
+      "مراجعة دقيقة لجميع الوثائق المرفقة بملف الاستيراد وتدقيق تصنيف HS Code للبضائع. نتأكد من توافق جميع المستندات مع المتطلبات الجمركية والبنكية.",
     features: [
-      "مراجعة الوثائق المتاحة",
-      "تدقيق أولي لـ HS Code",
-      "مطابقة المعلومات الأساسية",
-      "إبراز النواقص للمراجعة",
+      "مراجعة شاملة لجميع المستندات",
+      "تدقيق تصنيف HS Code الصحيح",
+      "التحقق من توافق الفواتير",
+      "اكتشاف الأخطاء والنواقص",
     ],
   },
   {
     icon: Landmark,
     title: "الامتثال لتعليمات البنك المركزي",
-    image: "/media/og-image.png",
+    image: "/media/service-bank.webp",
     description:
-      "تنظيم المستندات المتعلقة بالاستيراد والتحويل ضمن الملف، مع مراعاة التعليمات والمتطلبات ذات الصلة.",
+      "تنظيم ملفات التحويل المصرفي والاستيراد وفق التعليمات الصادرة عن البنك المركزي العراقي. نضمن أن جميع مستنداتك مستوفية للمتطلبات التنظيمية الحديثة.",
     features: [
       "مراجعة متطلبات التحويل المصرفي",
       "تدقيق الفواتير التجارية",
@@ -73,9 +73,9 @@ const services = [
   {
     icon: Building2,
     title: "خدمات الشركات والمستوردين",
-    image: "/media/og-image.png",
+    image: "/media/service-corporate.webp",
     description:
-      "تنظيم مستندات وملخصات للملفات المتكررة أو المتعددة بما يساعد فريقك على متابعة كل حالة بصورة أوضح.",
+      "حلول متكاملة للشركات الكبرى والمستوردين في إدارة ملفات الاستيراد. نوفر دعماً مستمراً وإدارة احترافية لضمان سير العمليات التجارية بكفاءة عالية.",
     features: [
       "إدارة ملفات الاستيراد المتعددة",
       "متابعة إجراءات التخليص",
@@ -87,7 +87,7 @@ const services = [
 
 export default function Services() {
   useEffect(() => {
-    document.title = "خدمات ASYCUDA وإدارة ملفات الاستيراد | Lexora Doc";
+    document.title = "خدمات ASYCUDA والتخليص الجمركي - Lexora Doc | البنك المركزي العراقي";
   }, []);
 
   return (
@@ -112,14 +112,16 @@ export default function Services() {
               custom={1}
               className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight"
             >
-              خدمات <span className="text-[#2D2F8F]">ASYCUDA</span> وإدارة ملفات الاستيراد
+              حلول شاملة في{" "}
+              <span className="text-[#2D2F8F]">ASYCUDA</span>{" "}
+              والجمارك
             </motion.h1>
             <motion.p
               variants={fadeUp}
               custom={2}
               className="text-lg text-gray-500 leading-relaxed mb-8"
             >
-              إعداد ومراجعة منظمة للوثائق والبيانات، مع توضيح الخطوة التالية وفق حالة الملف ومتطلبات الخدمة.
+              نقدم مجموعة متكاملة من الخدمات المتخصصة في إعداد الوثائق الجمركية، مراجعة ملفات الاستيراد، والامتثال الكامل لمتطلبات البنك المركزي العراقي.
             </motion.p>
             <motion.div variants={fadeUp} custom={3}>
               <a
@@ -142,17 +144,17 @@ export default function Services() {
           <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8">
             <div className="flex items-center gap-2">
               <Landmark className="w-5 h-5 text-[#B8972A]" />
-              <span className="text-[#2D2F8F] text-sm font-bold">مع مراعاة المتطلبات ذات الصلة</span>
+              <span className="text-[#2D2F8F] text-sm font-bold">وفق تعليمات البنك المركزي العراقي</span>
             </div>
             <div className="hidden md:block w-px h-6 bg-[#B8972A]/20" />
             <div className="flex items-center gap-2">
               <ShieldCheck className="w-5 h-5 text-[#2D2F8F]" />
-              <span className="text-[#2D2F8F] text-sm font-bold">مراجعة منظمة لبيانات ASYCUDA</span>
+              <span className="text-[#2D2F8F] text-sm font-bold">امتثال ASYCUDA World</span>
             </div>
             <div className="hidden md:block w-px h-6 bg-[#B8972A]/20" />
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-5 h-5 text-emerald-600" />
-              <span className="text-[#2D2F8F] text-sm font-bold">لا تمثل Lexora Doc جهة حكومية</span>
+              <span className="text-[#2D2F8F] text-sm font-bold">الهيئة العامة للجمارك</span>
             </div>
           </div>
         </div>
@@ -231,10 +233,10 @@ export default function Services() {
             className="text-center max-w-2xl mx-auto mb-16"
           >
             <motion.h2 variants={fadeUp} custom={0} className="text-3xl font-bold text-gray-900 mb-4">
-              كيف يساعدك المسار المنظم؟
+              لماذا تختار Lexora Doc؟
             </motion.h2>
             <motion.p variants={fadeUp} custom={1} className="text-gray-600">
-              يبدأ كل طلب بملخص واضح للحالة والمستندات المتاحة والإجراء التالي.
+              نجمع بين الخبرة العميقة والتفاني في تقديم خدمات عالية الجودة
             </motion.p>
           </motion.div>
 
@@ -242,18 +244,18 @@ export default function Services() {
             {[
               {
                 icon: Zap,
-                title: "نقطة بداية واضحة",
-                description: "تبدأ من نوع البضاعة والمنفذ وحالة الملف.",
+                title: "سرعة التنفيذ",
+                description: "معالجة سريعة وفعالة لملفاتك دون تأخير",
               },
               {
                 icon: ShieldCheck,
-                title: "مراجعة منظمة",
-                description: "تُرتب الوثائق والمعلومات ضمن نطاق الخدمة.",
+                title: "الدقة والامتثال",
+                description: "التزام كامل بمعايير ASYCUDA والبنك المركزي",
               },
               {
                 icon: MessageCircle,
-                title: "خطوة تالية محددة",
-                description: "تنتقل إلى التواصل برسالة طلب مرتبة.",
+                title: "دعم متخصص",
+                description: "فريق خبراء متاح للإجابة على جميع استفساراتك",
               },
             ].map((item, i) => (
               <motion.div

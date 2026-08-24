@@ -21,10 +21,10 @@ function ArticleContent({ content }: { content: string }) {
         const value = block.trim();
         if (!value) return null;
         if (value.startsWith("## ")) {
-          return <h2 key={index} className="pt-5 text-2xl font-extrabold text-[#101B52]">{value.slice(3)}</h2>;
+          return <h2 key={index} className="pt-5 text-2xl font-extrabold text-[#2D2F8F]">{value.slice(3)}</h2>;
         }
         if (value.startsWith("### ")) {
-          return <h3 key={index} className="pt-3 text-xl font-extrabold text-[#101B52]">{value.slice(4)}</h3>;
+          return <h3 key={index} className="pt-3 text-xl font-extrabold text-[#2D2F8F]">{value.slice(4)}</h3>;
         }
         if (value.split("\n").every((line) => line.startsWith("- "))) {
           return <ul key={index} className="space-y-2 pr-5">{value.split("\n").map((line) => <li key={line} className="list-disc pr-1">{line.slice(2)}</li>)}</ul>;

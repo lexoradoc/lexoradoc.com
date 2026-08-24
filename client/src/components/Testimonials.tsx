@@ -23,7 +23,7 @@ const testimonials: Testimonial[] = [
       "كنا نعاني من رفض ملفات الاستيراد بشكل متكرر بسبب أخطاء في تصنيف HS Code. بعد التعامل مع Lexora Doc، تم قبول الملف من أول تقديم. الفريق يعرف متطلبات البنك المركزي بدقة.",
     result: "تم قبول الملف من أول تقديم",
     rating: 5,
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663385768314/aneV9kYBsf2QHxWJrr67QY/avatar-man1-Vvk4kgg5hxzmfrThkUUekg.webp",
+    image: "/media/avatar-1.webp",
     sector: "تجارة عامة",
   },
   {
@@ -35,7 +35,7 @@ const testimonials: Testimonial[] = [
       "نتعامل مع Lexora Doc منذ أكثر من سنة لإدارة ملفات الاستيراد الشهرية. وفّرنا أكثر من 30% من الوقت المخصص للتخليص الجمركي. الخدمة منتظمة ودقيقة في كل مرة.",
     result: "توفير 30% من وقت التخليص",
     rating: 5,
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663385768314/aneV9kYBsf2QHxWJrr67QY/avatar-man2-4ECACmEoRYqYz3F98grMCv.webp",
+    image: "/media/avatar-2.webp",
     sector: "صادرات وواردات",
   },
   {
@@ -47,7 +47,7 @@ const testimonials: Testimonial[] = [
       "كنا نواجه مشكلة دائمة مع متطلبات التحويل المصرفي للبنك المركزي. بعد تعاملنا مع Lexora Doc، أصبحت جميع ملفاتنا مستوفية للمتطلبات التنظيمية. خدمة احترافية بامتياز.",
     result: "صفر مشاكل مع البنك المركزي",
     rating: 5,
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663385768314/aneV9kYBsf2QHxWJrr67QY/avatar-man3-PTkMpnpTzstRaxSrPVu9aP.webp",
+    image: "/media/avatar-3.webp",
     sector: "مجموعة تجارية",
   },
   {
@@ -59,7 +59,7 @@ const testimonials: Testimonial[] = [
       "أول مرة أستورد بضاعة وكنت قلقاً من تعقيدات الجمارك. فريق Lexora Doc راجع كل وثيقة بعناية وأرشدني خطوة بخطوة. انتهت المعاملة خلال 48 ساعة بدون أي مشاكل.",
     result: "إنهاء المعاملة خلال 48 ساعة",
     rating: 5,
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663385768314/aneV9kYBsf2QHxWJrr67QY/avatar-man4-WxxZaK52gv2ZUJAm9Tguag.webp",
+    image: "/media/avatar-4.webp",
     sector: "مواد غذائية",
   },
   {
@@ -71,7 +71,7 @@ const testimonials: Testimonial[] = [
       "نستورد معدات ثقيلة بشكل دوري وكانت ملفاتنا تتأخر كثيراً. منذ تعاملنا مع Lexora Doc أصبح كل ملف يُقدَّم بشكل صحيح من المرة الأولى. وفّرنا وقتاً ومالاً كثيراً.",
     result: "تقليص وقت التخليص بنسبة 40%",
     rating: 5,
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663385768314/aneV9kYBsf2QHxWJrr67QY/avatar-man5-mEPXB9y48FAEKDtg9YZnUu.webp",
+    image: "/media/avatar-5.webp",
     sector: "مقاولات",
   },
   {
@@ -83,7 +83,7 @@ const testimonials: Testimonial[] = [
       "كنت أعاني من أخطاء متكررة في ملفات ASYCUDA وتأخير في الإفراج عن البضائع. بعد التعامل مع Lexora Doc حُلّت جميع المشاكل. فريق محترف يفهم النظام الجمركي العراقي بعمق.",
     result: "لا تأخير في الإفراج الجمركي",
     rating: 5,
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663385768314/aneV9kYBsf2QHxWJrr67QY/avatar-man1-Vvk4kgg5hxzmfrThkUUekg.webp",
+    image: "/media/avatar-1.webp",
     sector: "أجهزة كهربائية",
   },
 ];

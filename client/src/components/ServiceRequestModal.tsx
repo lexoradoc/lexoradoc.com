@@ -3,7 +3,7 @@
  * يطلب: الاسم، نوع البضاعة، المنفذ الحدودي، حالة الملف
  * بعد الإرسال → يوجه البيانات إلى واتساب
  */
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { X, MessageCircle, Send, CheckCircle2, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
@@ -39,10 +39,9 @@ const fileStatuses = [
 interface Props {
   open: boolean;
   onClose: () => void;
-  initialFileStatus?: string;
 }
 
-export default function ServiceRequestModal({ open, onClose, initialFileStatus }: Props) {
+export default function ServiceRequestModal({ open, onClose }: Props) {
   const [formData, setFormData] = useState({
     name: "",
     goodsType: "",
@@ -51,23 +50,12 @@ export default function ServiceRequestModal({ open, onClose, initialFileStatus }
     notes: "",
   });
   const [submitted, setSubmitted] = useState(false);
-  const [agreed, setAgreed] = useState(false);
-
-  useEffect(() => {
-    if (!open) return;
-    setSubmitted(false);
-    setAgreed(false);
-    setFormData((prev) => ({
-      ...prev,
-      fileStatus: initialFileStatus || prev.fileStatus,
-    }));
-  }, [initialFileStatus, open]);
 
   const handleChange = (field: string, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
-  const isValid = formData.name.trim() && formData.goodsType.trim() && formData.borderPort && formData.fileStatus && agreed;
+  const isValid = formData.name.trim() && formData.goodsType.trim() && formData.borderPort && formData.fileStatus;
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -97,7 +85,6 @@ ${formData.notes ? `📝 *ملاحظات:* ${formData.notes}` : ""}
 
   const handleClose = () => {
     setSubmitted(false);
-    setAgreed(false);
     setFormData({ name: "", goodsType: "", borderPort: "", fileStatus: "", notes: "" });
     onClose();
   };
@@ -147,10 +134,10 @@ ${formData.notes ? `📝 *ملاحظات:* ${formData.notes}` : ""}
                 <div className="w-16 h-16 rounded-full bg-emerald-100 flex items-center justify-center mx-auto mb-4">
                   <CheckCircle2 className="w-8 h-8 text-emerald-600" />
                 </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">رسالة طلبك جاهزة</h3>
-                  <p className="text-gray-600 text-sm mb-6">
-                  سيتم فتح WhatsApp برسالة منظمة؛ أرسلها لمتابعة طلبك.
-                  </p>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">تم إرسال طلبك!</h3>
+                <p className="text-gray-600 text-sm mb-6">
+                  سيتم فتح واتساب لإرسال تفاصيل طلبك مباشرة إلى فريقنا
+                </p>
                 <Button
                   onClick={handleClose}
                   className="bg-[#2D2F8F] hover:bg-[#232570] text-white"
@@ -244,20 +231,6 @@ ${formData.notes ? `📝 *ملاحظات:* ${formData.notes}` : ""}
                   />
                 </div>
 
-                <label className="flex items-start gap-2 text-xs leading-5 text-gray-500 cursor-pointer">
-                  <input
-                    type="checkbox"
-                    checked={agreed}
-                    onChange={(e) => setAgreed(e.target.checked)}
-                    className="mt-1 h-3.5 w-3.5 accent-[#2D2F8F]"
-                  />
-                  <span>
-                    أوافق على مشاركة هذه البيانات لفتح رسالة الطلب عبر WhatsApp وفق
-                    {" "}
-                    <a href="/privacy" className="font-semibold text-[#2D2F8F] underline underline-offset-2">سياسة الخصوصية</a>.
-                  </span>
-                </label>
-
                 {/* Submit */}
                 <div className="pt-2 space-y-3">
                   <Button
@@ -266,10 +239,10 @@ ${formData.notes ? `📝 *ملاحظات:* ${formData.notes}` : ""}
                     className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-3 rounded-xl gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     <Send className="w-4 h-4" />
-                    تجهيز رسالة WhatsApp
+                    إرسال عبر واتساب
                   </Button>
                   <p className="text-xs text-gray-400 text-center">
-                    لن تُرسل أي بيانات تلقائياً؛ ستراجع الرسالة قبل إرسالها.
+                    سيتم فتح واتساب مع تفاصيل طلبك جاهزة للإرسال
                   </p>
                 </div>
               </form>

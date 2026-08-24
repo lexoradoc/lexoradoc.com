@@ -20,7 +20,7 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 
-const ABOUT_BG = "/media/og-image.png";
+const ABOUT_BG = "/media/hero.webp";
 const WHATSAPP_URL = "https://wa.me/9647844342200";
 
 const fadeUp = {
@@ -33,32 +33,32 @@ const fadeUp = {
 };
 
 const stats = [
-  { icon: FileCheck, value: "01", label: "فهم حالة الملف" },
-  { icon: Users, value: "02", label: "تنظيم الوثائق" },
-  { icon: Building2, value: "03", label: "تحديد الخطوة التالية" },
+  { icon: FileCheck, value: "+500", label: "ملف معالج" },
+  { icon: Users, value: "+200", label: "عميل راضٍ" },
+  { icon: Building2, value: "98%", label: "نسبة النجاح" },
 ];
 
 const values = [
   {
     icon: Shield,
     title: "الدقة والامتثال",
-    text: "نرتب المعلومات والمستندات ضمن نطاق الخدمة ونوضح العناصر التي تحتاج إلى مراجعة قبل المتابعة.",
+    text: "نلتزم بأعلى معايير الدقة في مراجعة الملفات الجمركية والتأكد من استيفاء جميع متطلبات نظام ASYCUDA والبنك المركزي العراقي.",
   },
   {
     icon: Award,
     title: "الاحترافية",
-    text: "نستخدم لغة عملية وواضحة تركز على المستندات والبيانات والخطوات القابلة للتنفيذ.",
+    text: "فريق متخصص من الخبراء في مجال الجمارك والوثائق الرسمية، يعمل على تقديم أعلى مستويات الخدمة لعملائنا.",
   },
   {
     icon: CheckCircle2,
     title: "الشفافية",
-    text: "نوضح بدايةً ما نستطيع تقديمه ضمن الملف، وما يبقى خاضعاً لقرارات الجهات المختصة.",
+    text: "نؤمن بالشفافية الكاملة في تعاملاتنا، من تقييم الملف إلى التسليم النهائي، مع إبلاغك بكل خطوة.",
   },
 ];
 
 export default function About() {
   useEffect(() => {
-    document.title = "من نحن | Lexora Doc";
+    document.title = "من نحن - Lexora Doc | خبراء ASYCUDA والتخليص الجمركي في العراق";
   }, []);
 
   return (
@@ -96,8 +96,8 @@ export default function About() {
               custom={2}
               className="text-lg text-gray-500 leading-relaxed"
             >
-              Lexora Doc تقدم خدمات إعداد وتنظيم ومراجعة للوثائق وملفات الاستيراد،
-              مع التركيز على بيانات ASYCUDA والخطوات الوثائقية ذات الصلة.
+              Lexora Doc منصة متخصصة في إعداد الوثائق الجمركية ومراجعة ملفات
+              الاستيراد وفق متطلبات نظام ASYCUDA World والبنك المركزي العراقي.
             </motion.p>
           </motion.div>
         </div>
@@ -109,17 +109,17 @@ export default function About() {
           <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8">
             <div className="flex items-center gap-2">
               <Landmark className="w-5 h-5 text-[#B8972A]" />
-              <span className="text-[#2D2F8F] text-sm font-bold">مستندات منظمة وفق حالة الملف</span>
+              <span className="text-[#2D2F8F] text-sm font-bold">وفق تعليمات البنك المركزي العراقي</span>
             </div>
             <div className="hidden md:block w-px h-6 bg-[#B8972A]/20" />
             <div className="flex items-center gap-2">
               <Shield className="w-5 h-5 text-[#2D2F8F]" />
-              <span className="text-[#2D2F8F] text-sm font-bold">مسار واضح لبيانات ASYCUDA</span>
+              <span className="text-[#2D2F8F] text-sm font-bold">امتثال ASYCUDA World</span>
             </div>
             <div className="hidden md:block w-px h-6 bg-[#B8972A]/20" />
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-5 h-5 text-emerald-600" />
-              <span className="text-[#2D2F8F] text-sm font-bold">Lexora Doc ليست جهة حكومية</span>
+              <span className="text-[#2D2F8F] text-sm font-bold">الهيئة العامة للجمارك</span>
             </div>
           </div>
         </div>
